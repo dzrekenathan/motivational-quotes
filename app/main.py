@@ -9,3 +9,8 @@ app = FastAPI()
 
 
 app.include_router(quotes.router)
+
+
+@app.get("/")
+def root():
+    return {"message": "Hello World"}
